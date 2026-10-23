@@ -1,0 +1,7 @@
+{
+  "id": "repro-ea-ring-loading-15-2026-10-12",
+  "date": "2026-10-12",
+  "verdict": "reproduit",
+  "rapport": "reproductions/repro-ea-ring-loading-15-2026-10-12/rapport.json",
+  "certificat": "sha256:aa1f9f0795fd5ba0c8e6b45f49bb66d6562c8f0bfac3288867c7c051a4d59468"
+}

@@ -1,0 +1,27 @@
+Source de la solution rejouée (relevée le 2026-10-12 à 19:38Z puis 19:40Z, par curl, sans compte)
+
+Le dépôt togethercomputer/EinsteinArena-new-SOTA NE CONTIENT PAS cette solution : son arbre à la tête de main
+(c388c6f7408c886311940896713339a1a70c2394, 2026-04-12, antérieure au record) liste 16 dossiers de problèmes et aucun
+n'est un code à deux suppressions ; les branches kissing-number et add_heilbronn n'ont aucun chemin contenant « deletion ».
+Il n'y a donc pas de commit sur lequel épingler : la source est l'API publique de la plateforme, épinglée par sha256.
+
+Fichier solutions : réponse de GET https://einsteinarena.com/api/solutions/best?problem_id=34&limit=4 (liste de 4 objets)
+  octets   : 16964
+  sha256   : 8fece05aec4a8ed9f4aac3b7078ad4f82f6b7e66ef9b4adc214077e835bea218
+  en-tête  : Date: Mon, 12 Oct 2026 19:38:23 GMT ; deux téléchargements consécutifs identiques octet pour octet
+  solution rejouée : objet d'id 2605, agentName nightshift-dc16, score 219, createdAt 2026-10-05T00:13:01.889Z,
+                     data = {"words": [219 chaînes]} ; les 3 autres objets (ids 2601, 2600, 2604 : 218, 216 et 216 mots) ne sont pas rejoués
+  liste des 219 mots (une par ligne, ordre du fichier, terminée par un saut de ligne) : sha256 f8ac54a8b0910350a896e9524e6f74b753124d788b52ac0618ab6de34a13755b
+Cette URL n'est pas immuable : elle rend les 4 meilleures solutions du moment ; une nouvelle soumission la change.
+Le sha256 ci-dessus fait foi, pas l'URL. scripts/rejouer.py n'épingle donc pas la réponse entière (sa version avec limit=10 a un
+autre sha256, f7dd5af4553c6970dd5ff33a2fc9787cf0eaea2a5e00ce0894d227784102e8e3, et donne le même rejeu) mais la liste des 219 mots. GET https://einsteinarena.com/api/solutions/2605 confirme l'id, le score 219 et la
+date d'évaluation 2026-10-05T00:15:35.322Z, sans les mots.
+
+Fichier problème : réponse de GET https://einsteinarena.com/api/problems/two-deletion-code-16 (énoncé et vérificateur)
+  octets   : 4590
+  sha256   : cf46e7b46470ddf9b7818c49da75a75b139663d30a2ff3f8956192247506c673
+  champ « verifier » (1153 caractères, UTF-8) : sha256 563cc3bc7d39bdc261dd6cff08eb634c03e149d59df8f0c7ceff5b3f68730325
+  l'énoncé porte « Under active review » : la plateforme invite à ne pas se fier à l'énoncé ni au vérificateur sans les relire.
+
+Licence : aucune trouvée (le dépôt new-SOTA n'en a pas, et aucune page de conditions n'a été lue sur le site : /terms rend 404).
+Les mots NE SONT PAS copiés dans ce dossier : on ne conserve que les URL et les empreintes.

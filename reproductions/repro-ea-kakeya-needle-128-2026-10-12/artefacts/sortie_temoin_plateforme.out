@@ -1,0 +1,7 @@
+sha256 du texte du verifier : 4d7e8ddd5a5044b3f0e66f745486538f5b76ddb6687e5fb536aca18b5c6cd098
+titre de l'énoncé : Discretized Kakeya Needle (n = 128)
+evaluate(...) = 0.10675394011230244
+aire exacte du témoin = 22598724902070159499743765877870160455101358423617701/211689843750000000000000000000000000000000000000000000
+float(aire exacte) == evaluate : True
+aire exacte du témoin == aire exacte du moteur A : True
+[code de sortie 0]

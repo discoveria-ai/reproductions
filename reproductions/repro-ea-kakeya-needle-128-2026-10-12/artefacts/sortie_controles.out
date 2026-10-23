@@ -1,0 +1,60 @@
+contrôle                                                                                     attendu  A        B        verdict
+N1 offset 17 décalé de +1e-6                                                                 rejet    REJETÉ   REJETÉ   OK
+    A : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    B : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    aire exacte arrondie (A) : 0.10675394028830243 ; accord exact A/B : True
+N2 offsets 0 et 127 échangés                                                                 rejet    REJETÉ   REJETÉ   OK
+    A : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    B : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    aire exacte arrondie (A) : 0.1134181507893781 ; accord exact A/B : True
+N3 offsets tous nuls (triangles à base commune)                                              rejet    REJETÉ   REJETÉ   OK
+    A : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    B : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    aire exacte arrondie (A) : 0.251953125 ; accord exact A/B : True
+N4 offsets dans l'ordre inverse                                                              rejet    REJETÉ   REJETÉ   OK
+    A : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    B : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    aire exacte arrondie (A) : 0.30319565223282313 ; accord exact A/B : True
+N5 solution intacte, valeur revendiquée abaissée à 0.1067                                    rejet    REJETÉ   REJETÉ   OK
+    A : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    B : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    aire exacte arrondie (A) : 0.10675394011230244 ; accord exact A/B : True
+N6 solution intacte, valeur revendiquée un double plus bas (0.10675394011230242)             rejet    REJETÉ   REJETÉ   OK
+    A : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    B : l'aire exacte arrondie au double diffère de la valeur revendiquée
+    aire exacte arrondie (A) : 0.10675394011230244 ; accord exact A/B : True
+N7 127 offsets au lieu de 128                                                                rejet    REJETÉ   REJETÉ   OK
+    A : forme : 128 chaînes attendues, reçu 127
+    B : forme : nombre d'offsets
+N8 offset 5 à 26 décimales (limite : 25)                                                     rejet    REJETÉ   REJETÉ   OK
+    A : forme : offset 5 a 26 décimales (> 25)
+    B : forme : offset 5 hors limites (1 chiffres entiers, 26 décimales)
+N9 offset 5 donné comme nombre JSON (flottant) et non comme chaîne                           rejet    REJETÉ   REJETÉ   OK
+    A : forme : offset 5 n'est pas une chaîne (float)
+    B : forme : offset 5 non chaîne
+N10 offset 5 en notation scientifique '1e-3'                                                 rejet    REJETÉ   REJETÉ   OK
+    A : forme : offset 5 n'est pas une chaîne décimale base 10 : '1e-3'
+    B : forme : offset 5 non décimal : '1e-3'
+N11 offset 5 à 5 chiffres entiers (limite : 4)                                               rejet    REJETÉ   REJETÉ   OK
+    A : forme : offset 5 a 5 chiffres entiers (> 4)
+    B : forme : offset 5 hors limites (5 chiffres entiers, 1 décimales)
+I1 offset 17 décalé de +1e-25 (information : la valeur revendiquée est un double)            accepté  VALIDE   VALIDE   OK
+    aire exacte modifiée : True ; écart exact = -8.882e-41 ; double inchangé : True
+P1 n = 1 : un triangle, aire 1/2                                                             accepté  VALIDE   VALIDE   OK
+    aire exacte A = 1/2 ; B = 1/2 ; attendue = 1/2
+P2 n = 2, offsets égaux : aire 3/8 (calcul à la main : 1/4 + 1/4 - 1/8)                      accepté  VALIDE   VALIDE   OK
+    aire exacte A = 3/8 ; B = 3/8 ; attendue = 3/8
+P3 n = 128, triangles disjoints (offsets 10 j) : somme des aires = 1/2                       accepté  VALIDE   VALIDE   OK
+    aire exacte A = 1/2 ; B = 1/2 ; attendue = 1/2
+P4 solution 2608 intacte, valeur revendiquée 0.10675394011230244                             accepté  VALIDE   VALIDE   OK
+    aire exacte A = B : True
+P5 entrée API id 2608 (Ghazt) : double de l'aire exacte = score 0.10675394011230244          accepté  VALIDE   VALIDE   OK
+P5 entrée API id 2578 (CrossingPaths) : double de l'aire exacte = score 0.10679779034341574  accepté  VALIDE   VALIDE   OK
+P5 entrée API id 2575 (JSAgent) : double de l'aire exacte = score 0.10701327550605384        accepté  VALIDE   VALIDE   OK
+P5 entrée API id 2563 (Station) : double de l'aire exacte = score 0.10706663656163481        accepté  VALIDE   VALIDE   OK
+P5b ordre exact croissant des aires dans la réponse de l'API : Ghazt < CrossingPaths < JSAgent < Station accepté  -        -        OK
+P6 différentiel A/B : 80 cas aléatoires (n de 2 à 8, offsets en huitièmes), graine 20261012  accepté  -        -        OK
+    divergences : 0
+
+résumé : tous les contrôles ont l’issue attendue
+[code de sortie 0]

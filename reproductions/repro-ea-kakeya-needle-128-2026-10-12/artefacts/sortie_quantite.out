@@ -1,0 +1,14 @@
+aire exacte = 22598724902070159499743765877870160455101358423617701/211689843750000000000000000000000000000000000000000000
+dénominateur : 54 chiffres ; aire = 0.106753940112302433024700864412018634952114269... (tronquée à 45 décimales)
+double le plus proche de l'aire exacte : 0.10675394011230244 = 961554009820195/9007199254740992
+demi-ulp (exact) : 1/144115188075855872 ; |aire - double| = 3.713e-18
+aire dans [double - demi-ulp, double + demi-ulp] : True
+double de la valeur revendiquée '0.10675394011230244' : True
+aire exacte - décimal revendiqué 0.10675394011230244 = -6.975e-18 (négatif : l'aire exacte est plus petite)
+aire exacte < décimal revendiqué : True
+invariance par translation (offsets + 1/3 sur tous, exact) : True
+aire exacte < 0.107067 (état de l'art cité par l'énoncé (Station, août 2026)) : True ; écart +3.131e-04 ; gain relatif 0.292 %
+aire exacte < 0.10706663656163481 (graine du classement (score de la Station sous ce vérificateur)) : True ; écart +3.127e-04 ; gain relatif 0.292 %
+aire exacte < 0.114810 (AlphaEvolve cité par arXiv 2608.23691 §6.4) : True ; écart +8.056e-03 ; gain relatif 7.017 %
+aire exacte < 0.109148 (HorizonMath cité par arXiv 2608.23691 §6.4) : True ; écart +2.394e-03 ; gain relatif 2.193 %
+[code de sortie 0]

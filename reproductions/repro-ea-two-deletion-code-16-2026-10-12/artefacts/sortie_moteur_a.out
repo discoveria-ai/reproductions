@@ -1,0 +1,11 @@
+MOTEUR A : solution 2605 (nightshift-dc16, 2026-10-05T00:13:01.889Z), 219 mots, 219 revendiqués
+  mots = 219
+  descendants_distincts_utilises = 6168
+  somme_tailles_boules = 6168
+  taille_boule_min = 3
+  taille_boule_max = 94
+  occupation_max_d_un_seau = 1
+  mots_de_longueur_14_possibles = 16384
+  paires en conflit : 0
+  VERDICT : VALIDE
+[code de sortie 0]

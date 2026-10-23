@@ -1,0 +1,9 @@
+MOTEUR B : solution 2605, 219 mots, 219 revendiqués
+  mots = 219
+  paires = 23871
+  lcs_maximal = 13
+  paires_a_lcs_13 = 4599
+  repartition_lcs = {2: 1, 3: 1, 4: 10, 5: 20, 6: 85, 7: 240, 8: 630, 9: 1609, 10: 3726, 11: 6483, 12: 6467, 13: 4599}
+  paires en conflit : 0
+  VERDICT : VALIDE
+[code de sortie 0]

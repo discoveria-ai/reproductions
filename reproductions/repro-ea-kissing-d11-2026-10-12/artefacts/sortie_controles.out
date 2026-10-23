@@ -1,0 +1,41 @@
+contrôle                                                                                     attendu  A        B        verdict
+N1 vecteur 5 perturbé (+1 sur p_0)                                                           rejet    REJETÉ   REJETÉ   OK
+    A : ['normes différentes : 2 valeurs', 'norme^2 différente de (36, 0)', '16 paire(s) à distance^2 < (36, 0)']
+    B : ['diagonale de Gram différente de (36, 0) : [(36, 0), (37, 0)]', '16 paire(s) avec <x,y> > 18']
+    A : première violation : paire (5, 18), distance^2 exacte = 31 + 0*sqrt(2)
+N2 605e vecteur dupliqué (copie du vecteur 7)                                                rejet    REJETÉ   REJETÉ   OK
+    A : ['vecteurs non distincts : 1 doublon(s)', '1 paire(s) à distance^2 < (36, 0)']
+    B : ['vecteurs non distincts', '1 paire(s) avec <x,y> > 18']
+    A : première violation : paire (7, 604), distance^2 exacte = 0 + 0*sqrt(2)
+N3 605e vecteur de mauvaise norme (7 e_1, norme^2 = 49)                                      rejet    REJETÉ   REJETÉ   OK
+    A : ['normes différentes : 2 valeurs', 'norme^2 différente de (36, 0)', '1 paire(s) à distance^2 < (36, 0)']
+    B : ['diagonale de Gram différente de (36, 0) : [(36, 0), (49, 0)]', '109 paire(s) avec <x,y> > 18']
+    A : première violation : paire (0, 604), distance^2 exacte = 1 + 0*sqrt(2)
+N4 605e vecteur de norme 36 trop proche de 6 e_1 (4 sqrt2, 2, 0..)                           rejet    REJETÉ   REJETÉ   OK
+    A : ['17 paire(s) à distance^2 < (36, 0)']
+    B : ['17 paire(s) avec <x,y> > 18']
+    A : première violation : paire (0, 604), distance^2 exacte = 72 + -48*sqrt(2)
+N5 dernier vecteur remplacé par (3 sqrt2, 3 sqrt2, 0..) : norme 36, distance violée          rejet    REJETÉ   REJETÉ   OK
+    A : ['18 paire(s) à distance^2 < (36, 0)']
+    B : ['18 paire(s) avec <x,y> > 18']
+    A : première violation : paire (0, 603), distance^2 exacte = 72 + -36*sqrt(2)
+N6 603 vecteurs pour une revendication de 604                                                rejet    REJETÉ   REJETÉ   OK
+    A : ['forme : en-tête n/dim inattendu : 603/11']
+    B : ['forme : en-tête n/dim']
+N7 entrée flottante 6.0                                                                      rejet    REJETÉ   REJETÉ   OK
+    A : ['forme : vecteur 0 : entrée non entière 6.0']
+    B : ['forme : entrée non entière']
+N8 entrée booléenne false à la place de 0                                                    rejet    REJETÉ   REJETÉ   OK
+    A : ['forme : vecteur 1 : entrée non entière False']
+    B : ['forme : entrée non entière']
+N9 vecteur 2 : coordonnée 6 + sqrt2 (norme^2 = 38 + 12 sqrt2)                                rejet    REJETÉ   REJETÉ   OK
+    A : ['normes différentes : 2 valeurs', 'norme^2 différente de (36, 0)', '1 paire(s) à distance^2 < (36, 0)']
+    B : ['diagonale de Gram différente de (36, 0) : [(36, 0), (38, 12)]', '109 paire(s) avec <x,y> > 18']
+    A : première violation : paire (2, 4), distance^2 exacte = 2 + 0*sqrt(2)
+P1 sous-ensemble de 603 vecteurs revendiqué 603 (doit passer)                                valide   VALIDE   VALIDE   OK
+P2 16 premiers vecteurs (+-6 e_i, i < 8) revendiqués 16 (doit passer ; distance^2 min = 72)  valide   VALIDE   VALIDE   OK
+P3 fichier intact, 604 (doit passer)                                                         valide   VALIDE   VALIDE   OK
+N4 : distance^2 minimale exacte observée = 72 + -48*sqrt(2) (attendu pour (0, 604) : 72 - 48*sqrt(2))
+N5 : distance^2 minimale exacte observée = 72 + -36*sqrt(2) (<= 72 - 36*sqrt(2) attendu pour (0, 603))
+TOUS LES CONTRÔLES CONFORMES
+[code de sortie 0]

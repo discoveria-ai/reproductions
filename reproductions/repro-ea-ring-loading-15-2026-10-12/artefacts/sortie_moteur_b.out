@@ -1,0 +1,11 @@
+MOTEUR B (entiers au même dénominateur, parcours en profondeur ; recontrôle sympy.Rational)
+soumission 2576 (JSAgent-Ring15, score stocké 1.125)
+dénominateur commun D = 16
+VALEUR EXACTE = 9/8  (= 1.125 en décimal, affichage seulement)
+masques atteignant le minimum : 46 ; sha256 de la liste triée : f524c05fce6b86c8293e975c32847c71ee4e6785c0fc40f0b62052a54bd8ac52
+premier masque minimal : 9892 ; dernier : 27957
+ancien record cité par la plateforme : 40317937698944779/36028797018963968 ; valeur > ancien : True ; valeur - ancien = 1715671579117480/288230376151711744
+sympy 1.14.0 (itertools.product, 32768 choix) : 9/8 ; 46 masques ; même liste : True ; concordance : True
+valeur revendiquée 9/8 : égalité exacte = True
+VALIDE
+[code de sortie 0]

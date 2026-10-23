@@ -1,0 +1,6 @@
+MOTEUR B : n = 604, dim = 11, norme^2 attendue = 36
+  diagonale de Gram (normes^2 distinctes) : ['36 + 0*sqrt(2)']
+  paires : 182106 ; valeurs distinctes de <x,y> : 22 ; <x,y> max = 18 + 0*sqrt(2) ; distance^2 minimale exacte = 36 + 0*sqrt(2) ; paires à égalité : 19704 ; violations : 0
+  sympy : 22 valeurs testées, 0 violée(s)
+  VERDICT : VALIDE
+[code de sortie 0]

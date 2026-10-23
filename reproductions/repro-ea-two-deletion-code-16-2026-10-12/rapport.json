@@ -1,0 +1,184 @@
+{
+  "format": "discoveria-rapport-reproduction/1",
+  "id": "repro-ea-two-deletion-code-16-2026-10-12",
+  "avancee": "ea-two-deletion-code-16",
+  "date": "2026-10-12",
+  "operateur": {
+    "nom": "DiscoverIA (agent Claude pour Antoine Olivier)",
+    "contexte": "deuxième reproduction certifiée externe de DiscoverIA ; session Claude Code 2026-10-12-claude-code-55938116086b, sous-agent exécutant sur mandat de la session ; code écrit pour ce rejeu, indépendant de la plateforme EinsteinArena"
+  },
+  "publication": "privee",
+  "revendication": {
+    "enonce": "Il existe un code binaire de longueur 16 corrigeant deux suppressions, de 219 mots : 219 mots binaires de longueur 16, deux à deux distincts, tels que deux mots distincts n'aient aucun descendant commun, un descendant étant un mot de longueur 14 obtenu en supprimant deux positions. Soumission d'id 2605 de l'agent nightshift-dc16 sur la plateforme EinsteinArena, évaluée le 2026-10-05 (score 219), contre 215 pour le record public cité par l'énoncé de la plateforme (Weindel et Heckel, v2).",
+    "quantite": "nombre de mots d'un code binaire de longueur 16 corrigeant deux suppressions",
+    "valeur_revendiquee": "219",
+    "decimal": "219",
+    "citation": "\"agentName\":\"nightshift-dc16\",\"bestScore\":219",
+    "source": {
+      "url": "https://einsteinarena.com/api/solutions/best?problem_id=34&limit=4",
+      "depot": "https://einsteinarena.com/problems/two-deletion-code-16",
+      "sha": "8fece05aec4a8ed9f4aac3b7078ad4f82f6b7e66ef9b4adc214077e835bea218"
+    }
+  },
+  "portee": {
+    "couvert": [
+      "Propriété vérifiée, exactement celle de l'énoncé de la plateforme : C est un ensemble de mots de {0,1}^16, deux à deux distincts, et D2(x) inter D2(y) est vide pour tous x != y de C, D2(x) étant l'ensemble des mots de longueur 14 obtenus en supprimant deux positions de x (120 choix de positions, descendants égaux regroupés). Pour deux mots de longueur 16, c'est équivalent à : aucune paire n'a de sous-séquence commune de longueur 14 (toute sous-séquence commune de longueur au moins 14 en contient une de longueur exactement 14, qui est un descendant des deux), c'est-à-dire plus longue sous-séquence commune (LCS) au plus 13 pour toute paire.",
+      "Le fichier de réponse de l'API (sha256 8fece05a..., 16 964 octets), objet d'id 2605 (agent nightshift-dc16, score 219, createdAt 2026-10-05T00:13:01.889Z), contient exactement 219 chaînes de 16 caractères toutes dans {0,1}, toutes distinctes ; liste épinglée par son sha256 f8ac54a8b0910350a896e9524e6f74b753124d788b52ac0618ab6de34a13755b.",
+      "Moteur A (énumération des descendants) : somme des tailles des 219 boules D2 = 6168 = nombre de descendants distincts utilisés (chaque seau de l'index inversé contient au plus un mot), donc boules deux à deux disjointes ; 0 paire en conflit ; 6168 <= 16384 = 2^14, la borne de comptage de l'énoncé. Tailles de boule de 3 à 94.",
+      "Moteur B (LCS sur les 23 871 paires, sans énumération) : 0 paire avec LCS >= 14 ; LCS maximal exactement 13, atteint par 4 599 paires (la propriété est donc serrée sur ces paires, sans marge) ; répartition exacte des LCS dans artefacts/sortie_moteur_b.out. Aucun flottant, aucune tolérance, aucun tirage dans les deux moteurs.",
+      "Les deux moteurs ont des algorithmes distincts et aucun import commun ; ils rendent les mêmes paires en conflit (ensemble vide ici) dans les 10 contrôles négatifs, y compris ceux à conflits multiples, et sur 40 codes aléatoires de 150 mots (16 805 paires en conflit au total, 0 désaccord).",
+      "Le vérificateur public de la plateforme (champ verifier de l'API, 1 153 caractères, sha256 563cc3bc..., relu en entier avant d'être épinglé) a été exécuté tel quel sur les mêmes mots : accepté, score 219.0. C'est un recoupement par un outil (role outil), ni un tiers, ni un second moteur de ce rapport."
+    ],
+    "suppose": [
+      "Que l'API de la plateforme a servi la vraie soumission de l'agent nightshift-dc16 (id 2605) : le rejeu vérifie les mots reçus, pas leur provenance, et le dépôt GitHub new-SOTA n'a pas ce fichier (voir écarts).",
+      "Que le dépôt de la plateforme n'a pas modifié le contenu de la solution d'id 2605 depuis le 2026-10-05 : seul le sha256 relevé le 2026-10-12 est épinglé (les deux relevés de 19:38Z et 19:40Z sont identiques, et la liste de mots est identique avec limit=4 et limit=10)."
+    ],
+    "cite_non_reconstruit": [
+      "Que 219 dépasse le record public (215 de Weindel et Heckel v2, trouvé avec KaMIS, construction non publiée selon l'énoncé de la plateforme ; 208 pour le meilleur code reproductible, CPro1) : cité par l'énoncé de la plateforme, aucune recherche de littérature n'a été faite pour ce rapport. La plateforme marque elle-même l'énoncé et le vérificateur « Under active review ».",
+      "L'attribution à l'agent nightshift-dc16 et la chronologie des soumissions (216 puis 218 mots par happy-gpt-astra-6 le 2026-10-03 ; 219 le 2026-10-05) : lues dans la réponse de l'API, non confirmées par une autre source.",
+      "Aucune optimalité : le rejeu n'exclut pas 220 mots ou davantage ; la borne supérieure de programmation linéaire (487) citée par l'énoncé n'est pas en jeu."
+    ]
+  },
+  "execution": {
+    "environnement": "Windows 11, Python 3.13.15 (bibliothèque standard seule) ; interpréteur lancé avec -I (mode isolé) ; réponse de l'API téléchargée dans un dossier séparé du code ; aucun réseau pendant le rejeu",
+    "commande": "python -I -X utf8 scripts/rejouer.py <dossier-téléchargement>/solutions_best_problem34_limit4.json <dossier-téléchargement>/problem_two-deletion-code-16.json <dossier-de-sortie>",
+    "debut": "2026-10-12T19:44:17Z",
+    "duree_s": 13.02,
+    "code_sortie": 0
+  },
+  "resultat": {
+    "valeur_obtenue": "219",
+    "arithmetique": "entiers-exacts",
+    "egalite_exacte": true,
+    "details": [
+      "219 mots binaires de longueur 16, deux à deux distincts ; 23 871 paires ; 0 paire en conflit (moteurs A et B).",
+      "Moteur A : 6 168 descendants distincts = somme des tailles des boules ; occupation maximale d'un seau 1.",
+      "Moteur B : LCS maximal 13 ; 4 599 paires à LCS 13 ; plus petit LCS observé 2 (1 paire).",
+      "Vérificateur public de la plateforme : accepté, score 219.0."
+    ]
+  },
+  "controles": [
+    {
+      "type": "negatif",
+      "realise": true,
+      "attendu": "echec",
+      "obtenu": "echec",
+      "description": "Mot ajouté qui viole la propriété : 220e mot égal au mot 0 avec un bit inversé (N1, LCS 15, conflits avec les mots 0, 4 et 37) ; 220e mot à LCS exactement 14 avec le mot 10, obtenu par deux suppressions et deux insertions (N2 : 0000101100111111, 5 conflits) ; frontière {0^16, 0^14 11} (N10, LCS 14). Les deux moteurs rejettent avec exactement les mêmes paires en conflit.",
+      "artefact": "artefacts/sortie_controles.out"
+    },
+    {
+      "type": "negatif",
+      "realise": true,
+      "attendu": "echec",
+      "obtenu": "echec",
+      "description": "Doublon : 220e mot copie exacte du mot 7 (N3) ; mot 5 remplacé par le mot 6 avec un bit inversé, effectif inchangé 219 (N4, 6 conflits) : rejetés par les deux moteurs pour le motif attendu (doublon, puis descendant commun).",
+      "artefact": "artefacts/sortie_controles.out"
+    },
+    {
+      "type": "negatif",
+      "realise": true,
+      "attendu": "echec",
+      "obtenu": "echec",
+      "description": "Entrées hors format : mot de longueur 15 (N5), caractère 2 (N6), entier 101 à la place d'une chaîne (N7), 218 mots pour 219 revendiqués (N8), mot suivi d'une espace (N9) : rejetés par les deux moteurs.",
+      "artefact": "artefacts/sortie_controles.out"
+    },
+    {
+      "type": "controle-positif",
+      "realise": true,
+      "attendu": "succes",
+      "obtenu": "succes",
+      "description": "Le vérificateur peut accepter : fichier intact revendiqué 219 (P1), 218 premiers mots (P2), 100 premiers mots (P3), {0^16, 1^16} (P4), frontière {0^16, 0^13 111} à LCS exactement 13 (P5, LCS maximal observé par B = 13). Cohérences : suppression par bits (A) égale suppression par chaînes sur les 65 536 mots de 16 bits (C1, 0 désaccord) ; mêmes paires en conflit en A et B sur 40 codes aléatoires de 150 mots, graine 20261012 (C2, 0 désaccord ; test à graine fixe, pas une preuve d'équivalence).",
+      "artefact": "artefacts/sortie_controles.out"
+    },
+    {
+      "type": "second-moteur",
+      "realise": true,
+      "attendu": "succes",
+      "obtenu": "succes",
+      "description": "Moteur B (LCS par programmation dynamique sur chaque paire, sans énumérer les descendants, sans import de A) : même verdict VALIDE et même absence de conflit que le moteur A (énumération des descendants et index inversé). Écrit par le même opérateur : indépendance de code et d'algorithme, pas d'auteur.",
+      "artefact": "artefacts/sortie_moteur_b.out"
+    },
+    {
+      "type": "lean",
+      "realise": false,
+      "description": "Pas de certification Lean ; la revendication n'en porte pas."
+    },
+    {
+      "type": "horodatage",
+      "realise": false,
+      "description": "L'empreinte de ce rapport est horodatée après son figement (rapport.json.ots et MANIFEST.sha256 du dossier reproductions/) ; ce contrôle ne peut pas figurer dans le rapport sans changer son empreinte : à vérifier par stamp.py verify."
+    }
+  ],
+  "ecarts": [
+    "Le mandat prévoyait une URL épinglée sur un commit du dépôt togethercomputer/EinsteinArena-new-SOTA : impossible, ce dépôt ne contient aucune solution de ce problème (16 dossiers à la tête de main c388c6f7, aucun chemin « deletion », branches kissing-number et add_heilbronn comprises). La source est l'API de la plateforme ; revendication.source.sha est donc le sha256 d'une réponse d'API, pas un commit git.",
+    "L'URL de l'API n'est pas immuable : elle rend les meilleures solutions du moment. Le rejeu n'épingle pas la réponse entière mais la liste de mots de la solution 2605 (sha256 f8ac54a8...) ; si la plateforme retire cette solution de sa réponse ou la supprime, le rejeu public n'est plus possible faute de copie (les mots ne sont pas copiés ici, licence non établie).",
+    "La date d'annonce de l'entrée est le 2026-10-03 (216 mots, happy-gpt-astra-6) ; le 219 de nightshift-dc16 date du 2026-10-05 : cohérent, sans effet sur la valeur.",
+    "L'énoncé de la plateforme dit que 216 mots améliorerait le record publié au 2026-09-15 et que 209 à 215 améliorent la base reproductible (208) : le rejeu ne vérifie aucune de ces comparaisons.",
+    "Les 3 autres solutions de la réponse (ids 2601, 2600, 2604 : 218, 216, 216 mots) n'ont pas été rejouées ; seule la solution d'id 2605 l'a été.",
+    "Le test C2 (codes aléatoires) est à graine fixe : il appuie l'équivalence des deux moteurs mais ne la démontre pas ; l'équivalence LCS >= 14 et descendant commun est démontrée dans la portée (une sous-séquence commune de longueur >= 14 en contient une de longueur 14)."
+  ],
+  "artefacts": [
+    {
+      "chemin": "scripts/verif_a.py",
+      "sha256": "cd1d4459235cdf728d5d358d397e03fe08f6f4f8cadff73291fcb703b34a8733",
+      "role": "moteur A : entiers de 16 bits, 120 suppressions de deux positions par opérations sur les bits, index inversé 14 bits -> mots ; aucune LCS"
+    },
+    {
+      "chemin": "scripts/verif_b.py",
+      "sha256": "55ff0dfe418c25b99b854bb675b5f6666a669afcf00064f4eb5d1943024a0dff",
+      "role": "moteur B : plus longue sous-séquence commune (programmation dynamique) sur chacune des 23 871 paires ; aucune énumération de descendants, aucun import de A"
+    },
+    {
+      "chemin": "scripts/verif_plateforme.py",
+      "sha256": "6772bf43b257b01fec62e3661e3af18fca5fea6df1b8c8c9bdd14563fea5437a",
+      "role": "exécute tel quel le vérificateur public de la plateforme (texte épinglé par sha256) sur les mots ; outil, pas un second moteur"
+    },
+    {
+      "chemin": "scripts/controles.py",
+      "sha256": "e49918002e75ae4fdc6e2b0e578db6f93aca0037cd453c47e18e5cf1eb02d583",
+      "role": "contrôles négatifs N1-N10, positifs P1-P5, cohérences C1 (suppression bits = chaînes sur 65 536 mots) et C2 (codes aléatoires, mêmes paires en A et B)"
+    },
+    {
+      "chemin": "scripts/rejouer.py",
+      "sha256": "6da22f129ad4632687717730a1a11a8f0020eea4cb531b50c02906a14ab02805",
+      "role": "lanceur : vérifie le sha256 de la liste des mots, lance les quatre étapes en python -I, écrit les .out"
+    },
+    {
+      "chemin": "scripts/empreintes.py",
+      "sha256": "bd3804108827edaae20293a58fce505d4f933c490d93ff76428319fdc1124875",
+      "role": "sha256 et sha1 d'objet git d'un fichier (copie de celui de la fiche 604)"
+    },
+    {
+      "chemin": "artefacts/source.txt",
+      "sha256": "9d8306dad8f6c8f932212b55582bb26d80e41186311fa94effd6d7cb9ae7a100",
+      "role": "source (API de la plateforme, pas de commit git), sha256 de la réponse, de la liste des mots et du vérificateur ; limites de licence"
+    },
+    {
+      "chemin": "artefacts/sortie_moteur_a.out",
+      "sha256": "16841191bfa5c2f5f3e78e82c3db022a5c7d8338a3ae4ad2911ca78d3a52522b",
+      "role": "sortie du moteur A : VALIDE, 219 mots, 6168 descendants distincts, aucun conflit"
+    },
+    {
+      "chemin": "artefacts/sortie_moteur_b.out",
+      "sha256": "5ac95bf6ac0992b07cefd97e5b638b1b8db413631ebab5ce0f725b9ef3298106",
+      "role": "sortie du moteur B : VALIDE, 23 871 paires, LCS maximal 13, répartition des LCS"
+    },
+    {
+      "chemin": "artefacts/sortie_controles.out",
+      "sha256": "90ebaf05c412864ed7fb9bb0009f066e4ed3a1701af10438807f7d6e12d76c85",
+      "role": "tableau des contrôles : 10 rejets attendus, 5 acceptations attendues, 2 cohérences, tous conformes"
+    },
+    {
+      "chemin": "artefacts/sortie_plateforme.out",
+      "sha256": "96db4cf405a8cd1cffd5321768ce6dbdfcd98b1d11adf90aeb35830b9a3d4a6f",
+      "role": "sortie du vérificateur public de la plateforme : ACCEPTÉ, score 219.0"
+    }
+  ],
+  "verdict": "reproduit",
+  "justification": "Le code de 219 mots publié par l'API de la plateforme (solution d'id 2605, nightshift-dc16) a été rejoué sans flottant ni tolérance : 219 mots binaires de longueur 16 deux à deux distincts, boules de deux suppressions deux à deux disjointes (moteur A : 6 168 descendants distincts pour une somme de tailles de boules de 6 168 ; moteur B : plus longue sous-séquence commune au plus 13 sur les 23 871 paires, 4 599 à 13). Deux moteurs d'algorithmes distincts concordent, dix contrôles négatifs sont rejetés pour le motif attendu et avec les mêmes paires en conflit, et le vérificateur public de la plateforme accepte les mêmes mots. Le rejeu établit qu'un code de 219 mots existe ; il n'établit ni que 219 dépasse le record de la littérature, ni l'attribution à l'agent, ni l'optimalité.",
+  "a_decider": [
+    "Changer ou non le statut public de ea-two-deletion-code-16 (actuellement non-evalue) : une reproduction privée ne le change pas par elle-même.",
+    "Publier ou non ce verdict.",
+    "Archiver ou non la réponse de l'API (archive externe, copie des 219 mots) pour que le rejeu survive à un retrait par la plateforme : action externe, à ne faire qu'avec l'accord d'Antoine ; la licence des mots n'est pas établie."
+  ]
+}

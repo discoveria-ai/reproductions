@@ -1,0 +1,19 @@
+Source de la solution rejouée (relevée le 2026-10-12, 19:11Z puis 19:16Z, par curl, sans compte)
+
+Fichier       : kissing-number/solutions/solution_n=604_d=11.json
+Dépôt         : https://github.com/togethercomputer/EinsteinArena-new-SOTA (aucune licence : API GitHub license null, cf. data/import/einsteinarena.md)
+URL épinglée  : https://raw.githubusercontent.com/togethercomputer/EinsteinArena-new-SOTA/d97e89d1d01848e9393fc48061019a2a4b99d99f/kissing-number/solutions/solution_n=604_d=11.json
+Commit        : d97e89d1d01848e9393fc48061019a2a4b99d99f, 2026-04-12T06:46:34Z, « add n=604 » (seul commit touchant ce chemin d'après
+                l'API commits?path=..., consultée le 2026-10-12 ; première page, 1 résultat)
+Tête de main  : c388c6f7408c886311940896713339a1a70c2394 (2026-04-12T18:23:07Z) au moment de la lecture
+Blob git      : c7c87ab577b844b6152bcd8e8002dd92f07663cc (API contents, ref=main) ; recalculé localement : identique
+Taille        : 42551 octets
+sha256        : 0bde9ca2c434d7beb5af63a64a291498e8c264d9a5718b738e92dd70b9ba7761 (identique entre le téléchargement sur main et celui sur le commit épinglé)
+ETag raw      : "d5c5a057eeace5b8559c3a55b980fe44933680a47b8cdb593cd7b1cdc7d43fb3" (en-tête HTTP de raw.githubusercontent.com, sans valeur de preuve)
+
+La solution n'est PAS copiée dans ce dossier : le dépôt n'a pas de licence. On ne conserve que l'URL et les empreintes.
+
+Vérificateur public de la plateforme (https://einsteinarena.com/api/problems/kissing-number-d11, lu le 2026-10-12) :
+  titre « Kissing Number in Dimension 11 (n=594) », exige 594 vecteurs de 11 flottants/décimaux, Decimal à 80 chiffres,
+  critère min ||xi-xj||^2 >= max ||xi||^2 ; il ne peut donc pas recevoir les 604 vecteurs, ni le format Z[sqrt 2] du fichier.
+  Nos moteurs A et B appliquent le même critère (distance^2 minimale >= norme^2 commune) en arithmétique exacte.

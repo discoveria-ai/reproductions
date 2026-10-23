@@ -1,0 +1,32 @@
+clés du fichier : ['description', 'dim', 'n', 'vectors']
+n = 604 dim = 11 ; description du fichier : Each vector has 22 integers: [p0,q0,p1,q1,...,p10,q10]. Coordinate k = p_{2k} + q_{2k+1} * sqrt(2). All vectors scaled by 3 (norm^2 = 36). Verify: for all i<j, dist^2(i,j) >= 36 in Z[sqrt(2)] arithmetic.
+vecteurs : 604 ; entrées par vecteur : [22]
+vecteurs avec au moins une partie en sqrt(2) non nulle : 108
+valeurs distinctes des parties p : [-6, -3, 0, 3, 6]
+valeurs distinctes des parties q : [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+plus grande entrée en valeur absolue : 6
+valeurs distinctes de distance^2 (a + b sqrt2) et nombre de paires :
+  36 + 0*sqrt(2) : 19704
+  54 + -12*sqrt(2) : 4608
+  72 + -24*sqrt(2) : 384
+  54 + -6*sqrt(2) : 2304
+  72 + -18*sqrt(2) : 768
+  54 + 0*sqrt(2) : 19968
+  72 + -12*sqrt(2) : 3072
+  54 + 6*sqrt(2) : 2304
+  72 + -6*sqrt(2) : 2304
+  54 + 12*sqrt(2) : 4608
+  72 + 0*sqrt(2) : 61756
+  90 + -12*sqrt(2) : 4608
+  72 + 6*sqrt(2) : 2304
+  90 + -6*sqrt(2) : 2304
+  72 + 12*sqrt(2) : 3072
+  90 + 0*sqrt(2) : 19968
+  72 + 18*sqrt(2) : 768
+  90 + 6*sqrt(2) : 2304
+  72 + 24*sqrt(2) : 384
+  90 + 12*sqrt(2) : 4608
+  108 + 0*sqrt(2) : 19704
+  144 + 0*sqrt(2) : 302
+degré dans le graphe des contacts (paires à distance^2 = 36 exactement) : [(36, 108), (67, 384), (84, 96), (108, 16)]
+[code de sortie 0]

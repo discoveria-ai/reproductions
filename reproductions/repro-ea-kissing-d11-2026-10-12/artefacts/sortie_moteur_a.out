@@ -1,0 +1,5 @@
+MOTEUR A : n = 604, dim = 11, norme^2 attendue = 36
+  normes^2 distinctes : ['36 + 0*sqrt(2)']
+  paires : 182106 ; distance^2 minimale exacte = 36 + 0*sqrt(2) ; paires à égalité avec la norme^2 : 19704 ; violations : 0
+  VERDICT : VALIDE
+[code de sortie 0]

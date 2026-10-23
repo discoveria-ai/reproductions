@@ -1,0 +1,40 @@
+N1 220e mot ajouté = mot 0 avec un bit inversé (LCS 15 avec lui)                       rejet    REJETÉ   REJETÉ   OK
+    A : ['3 paire(s) de mots partageant un descendant de longueur 14'] ; conflits [(0, 219), (4, 219), (37, 219)]
+    B : ['3 paire(s) avec une sous-séquence commune de longueur >= 14'] ; conflits [(0, 219), (4, 219), (37, 219)]
+N2 220e mot à LCS >= 14 avec le mot 10 (deux suppressions, deux insertions) : 0000101100111111 rejet    REJETÉ   REJETÉ   OK
+    A : ['5 paire(s) de mots partageant un descendant de longueur 14'] ; conflits [(10, 219), (16, 219), (44, 219), (45, 219), (119, 219)]
+    B : ['5 paire(s) avec une sous-séquence commune de longueur >= 14'] ; conflits [(10, 219), (16, 219), (44, 219), (45, 219), (119, 219)]
+N3 220e mot = copie exacte du mot 7 (doublon)                                          rejet    REJETÉ   REJETÉ   OK
+    A : ['mots non distincts : 1 doublon(s)'] ; conflits []
+    B : ['mots non distincts : 1 mot(s) répété(s)'] ; conflits []
+N4 mot 5 remplacé par le mot 6 avec un bit inversé (effectif inchangé 219)             rejet    REJETÉ   REJETÉ   OK
+    A : ['6 paire(s) de mots partageant un descendant de longueur 14'] ; conflits [(5, 6), (5, 24), (5, 25), (5, 27), (5, 39), (5, 73)]
+    B : ['6 paire(s) avec une sous-séquence commune de longueur >= 14'] ; conflits [(5, 6), (5, 24), (5, 25), (5, 27), (5, 39), (5, 73)]
+N5 mot de longueur 15 (mot 3 tronqué)                                                  rejet    REJETÉ   REJETÉ   OK
+    A : ['forme : mot 3 de longueur 15 au lieu de 16'] ; conflits []
+    B : ["forme : mot 3 n'est pas un mot binaire de longueur 16"] ; conflits []
+N6 mot avec un caractère '2'                                                           rejet    REJETÉ   REJETÉ   OK
+    A : ['forme : mot 3 contient un caractère hors 0/1'] ; conflits []
+    B : ["forme : mot 3 n'est pas un mot binaire de longueur 16"] ; conflits []
+N7 entier 101 à la place d'une chaîne                                                  rejet    REJETÉ   REJETÉ   OK
+    A : ["forme : mot 3 n'est pas une chaîne (int)"] ; conflits []
+    B : ['forme : mot 3 de type int'] ; conflits []
+N8 218 mots pour 219 revendiqués                                                       rejet    REJETÉ   REJETÉ   OK
+    A : ['forme : 218 mots pour 219 revendiqués'] ; conflits []
+    B : ['forme : 218 mots pour 219 revendiqués'] ; conflits []
+N9 mot suivi d'une espace (longueur 17)                                                rejet    REJETÉ   REJETÉ   OK
+    A : ['forme : mot 3 de longueur 17 au lieu de 16'] ; conflits []
+    B : ["forme : mot 3 n'est pas un mot binaire de longueur 16"] ; conflits []
+N10 {0^16, 0^14 11} : LCS exactement 14 (frontière côté rejet)                         rejet    REJETÉ   REJETÉ   OK
+    A : ['1 paire(s) de mots partageant un descendant de longueur 14'] ; conflits [(0, 1)]
+    B : ['1 paire(s) avec une sous-séquence commune de longueur >= 14'] ; conflits [(0, 1)]
+P1 fichier intact, 219 revendiqués                                                     valide   VALIDE   VALIDE   OK
+P2 les 218 premiers mots, 218 revendiqués                                              valide   VALIDE   VALIDE   OK
+P3 les 100 premiers mots, 100 revendiqués                                              valide   VALIDE   VALIDE   OK
+P4 {0^16, 1^16}                                                                        valide   VALIDE   VALIDE   OK
+P5 {0^16, 0^13 111} : LCS exactement 13 (frontière côté acceptation)                   valide   VALIDE   VALIDE   OK
+    P5 : LCS maximal observé par B = 13 (attendu 13) OK
+C1 suppression par bits (A) = suppression par chaînes sur les 65536 mots : 0 désaccord(s) OK
+C2 40 codes aléatoires de 150 mots (graine 20261012) : 16805 paires en conflit au total, 0 désaccord(s) entre A et B OK
+TOUS LES CONTRÔLES CONFORMES
+[code de sortie 0]

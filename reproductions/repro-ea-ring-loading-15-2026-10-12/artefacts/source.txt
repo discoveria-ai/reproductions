@@ -1,0 +1,43 @@
+Source de la solution rejouée (relevée le 2026-10-12 à 19:38Z, par curl, sans compte)
+
+ATTENTION : cette source n'est PAS épinglable sur un commit. Le dépôt https://github.com/togethercomputer/EinsteinArena-new-SOTA
+(tête de main c388c6f7408c886311940896713339a1a70c2394, 2026-04-12) ne contient aucun fichier du problème de chargement
+d'anneau (arbre complet listé le 2026-10-12 : aucun chemin contenant « ring » ou « loading »). La seule source publique
+de la solution est l'API de la plateforme, qui est modifiable (nouvelles soumissions, énoncé « Under active review »).
+On épingle donc par empreintes de contenu, pas par version.
+
+Soumission rejouée : id 2576, agent JSAgent-Ring15, score stocké 1.125, créée le 2026-09-12T04:47:31.279Z.
+
+Solution (15 paires, GET sans compte) :
+  https://einsteinarena.com/api/solutions/best?problem_id=30&limit=10
+  Réponse lue : 7 soumissions (ids 2566, 2569, 2573, 2574, 2576, 2592, 2593), 5392 octets
+  sha256 du corps de la réponse : 985f70627083e95866f12826fd6bb440f9b417be0d54eef973e1e25f4fc1de09
+  (le corps change dès qu'une nouvelle soumission entre dans le classement ; ne pas s'en servir comme clé)
+  sha256 canonique de la soumission 2576 (clé d'épinglage de rejouer.py, forme dans scripts/empreintes.py) :
+    3b9d1e3a1278889d29d6120e13db84a6cd45e20c4d2601f98c77a3c412425e80
+  sha256 canoniques des six autres soumissions utilisées par les contrôles :
+    2566 (AlphaEvolve)       7966364ba27eab8177b1ce769f495e3c439468d88d4bc20a502ccc75f16db4bb
+    2569 (GPT-Explorer)      6aa4d43d5e987afe4c2f2adf6059035bbc5714b4908a1a550fdcba5a123a2211
+    2573 (GPT-Explorer)      551a21a8ae65c888d4e9205b1f0f12aabac11df660a79d39e8844c9e7e42d1bc
+    2574 (GPT-Explorer)      5c28d1d7a0697cd85efc5ac06b8c59880de29d5446aa35e8c180e4c7d207a2e8
+    2592 (Wilhelmina)        507eae79a16aa753c3fa41881745ee8d61f4af9f2813c753117e207a1ea188f0
+    2593 (Wilhelmina)        cd2e833d4dd8ad8619cfb68c183f57b5f270324d5c50c69b8769a948e97c58b6
+  Contrôle croisé : GET https://einsteinarena.com/api/solutions/2576 -> statut « evaluated », score 1.125,
+  évaluée le 2026-09-12T05:00:38.753Z (ne renvoie pas les paires). Classement :
+  https://einsteinarena.com/api/leaderboard?problem_id=30&limit=5 -> JSAgent-Ring15 1.125 (1 soumission), Wilhelmina
+  1.1249999999999991, GPT-Explorer 1.119047619047619, AlphaEvolve 1.1190475684692773.
+
+Énoncé et vérificateur de la plateforme (lus, non exécutés) :
+  https://einsteinarena.com/api/problems/ring-loading-15
+  sha256 du corps : 49f4427e30688fa67b37a10e50f1b33d6656d32cb00a67d9f1b50fed73bf5a9a (4573 octets)
+  Bandeau de l'énoncé : « Under active review: This problem statement and verifier are being reviewed for mathematical
+  correctness, verifier robustness, and potential exploits. »
+  Ancien record cité : 40317937698944779/36028797018963968 (environ 1.1190475684692773), construction d'AlphaEvolve
+  (problème 61 du dépôt de problèmes d'AlphaEvolve), lue en dyadiques exacts par la plateforme.
+
+Papier arXiv 2606.10402 (v2, version HTML) : texte intégral lu le 2026-10-12 par WebFetch (résumé par un petit modèle,
+105 382 caractères en deux appels) : aucune mention du chargement d'anneau, de 1.125 ni de 1.119 (estimé : le résumé par
+le modèle n'est pas une recherche textuelle exacte). Le record est postérieur au papier (soumission du 2026-09-12).
+
+Licence : les données de l'API n'ont aucune licence lisible. La solution (15 paires) n'est donc PAS copiée dans ce
+dossier : on ne garde que l'URL et les empreintes. Les scripts prennent le chemin du fichier téléchargé en argument.

@@ -1,0 +1,3 @@
+# Octets figés : leurs empreintes sha256 sont gravées dans les rapports et le manifeste.
+reproductions/** -text
+LICENSE* text

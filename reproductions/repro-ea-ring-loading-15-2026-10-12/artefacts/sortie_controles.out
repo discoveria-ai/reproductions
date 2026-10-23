@@ -1,0 +1,23 @@
+Contrôles du rejeu (chaque ligne : code | conformité | contrôle | détail)
+N1 | CONFORME | 14 paires au lieu de 15 | A : 15 paires exactement attendues ; B : 15 paires exactement attendues
+N2 | CONFORME | paire 0 = (1/2, 3/4) : u + v = 5/4 > 1 | A : u + v <= 1 violé ; B : u + v <= 1 violé
+N3 | CONFORME | valeur négative -7/16 | A : format : décimal ou fraction positifs attendus ; B : format : décimal ou fraction positifs attendus
+N4 | CONFORME | nombre JSON 0.25 au lieu d'une chaîne | A : valeur non chaîne : les valeurs doivent être des chaînes ; B : valeur non chaîne : les valeurs doivent être des chaînes
+N5 | CONFORME | dénominateur 2^65 (dépasse 64 bits) | A : numérateur ou dénominateur réduit dépassant 64 bits ; B : numérateur ou dénominateur réduit dépassant 64 bits
+N6 | CONFORME | texte non rationnel '1/4.5' | A : format : décimal ou fraction positifs attendus ; B : format : décimal ou fraction positifs attendus
+N7 | CONFORME | paire 4 (1/4, 1/4) remplacée par (1/4, 1/8) | A : 1 ; B : 1 ; < 9/8
+N8 | CONFORME | paire 1 (1, 0) remplacée par (999999/1000000, 0) | A : 1124999/1000000 ; B : 1124999/1000000 ; < 9/8
+N9 | CONFORME | paire 7 (1/2, 1/2) : u réduit de 1e-9 | A : 1124999999/1000000000 ; B : 1124999999/1000000000 ; < 9/8
+N10 | CONFORME | soumission 2593 (Wilhelmina, score stocké 1.1249999999999991) | A : 1266637395197951/1125899906842624 ; B : 1266637395197951/1125899906842624 ; < 9/8
+N11 | CONFORME | soumission 2574 (GPT-Explorer, score stocké 1.119047619047619) | A : 47/42 ; B : 47/42 ; < 9/8
+N12 | CONFORME | soumission 2566 (AlphaEvolve, ancien record) | A : 40317937698944779/36028797018963968 ; B : 40317937698944779/36028797018963968 ; < 9/8
+N13 | CONFORME | 15 paires (0, 0) | A : 0 ; B : 0 ; < 9/8
+P1 | CONFORME | soumission 2576 : 9/8 exactement (revendication) | A : 9/8 ; B : 9/8 ; 46 et 46 masques minimaux
+P2 | CONFORME | soumission 2566 (AlphaEvolve) = valeur exacte citée par l'énoncé de la plateforme | A : 40317937698944779/36028797018963968 ; B : 40317937698944779/36028797018963968 ; attendu : 40317937698944779/36028797018963968
+P3 | CONFORME | float(valeur exacte) = score stocké pour les 7 soumissions, A et B d'accord | 2566:40317937698944779/36028797018963968 ; 2569:40317938011918955/36028797018963968 ; 2573:40317938014265769/36028797018963968 ; 2574:47/42 ; 2576:9/8 ; 2592:79164837199871/70368744177664 ; 2593:1266637395197951/1125899906842624
+P4 | CONFORME | invariance : échange u <-> v dans toutes les paires | A : 9/8 ; B : 9/8
+P5 | CONFORME | invariance : ordre des 15 paires renversé | A : 9/8 ; B : 9/8
+P6 | CONFORME | homogénéité : toutes les valeurs divisées par 2 donnent 9/16 | A : 9/16 ; B : 9/16
+P7 | CONFORME | homogénéité : soumission 2574 divisée par 3 donne le tiers de sa valeur | A : 47/126 ; B : 47/126 ; valeur de 2574 : 47/42
+13 contrôles négatifs, 7 contrôles positifs ; non conformes : aucun
+[code de sortie 0]

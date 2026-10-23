@@ -1,0 +1,7 @@
+{
+  "id": "repro-ea-kakeya-needle-128-2026-10-12",
+  "date": "2026-10-12",
+  "verdict": "reproduit",
+  "rapport": "reproductions/repro-ea-kakeya-needle-128-2026-10-12/rapport.json",
+  "certificat": "sha256:2cc7170720e74958f4e9e0732636802381ada0ca0ed22a28f8d79cffe7871f4e"
+}

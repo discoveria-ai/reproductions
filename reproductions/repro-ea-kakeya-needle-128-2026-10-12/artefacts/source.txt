@@ -1,0 +1,32 @@
+Source de la solution rejouée (relevée le 2026-10-12 entre 19:38Z et 19:41Z, par curl, sans compte, requêtes GET publiques)
+
+Problème      : « Discretized Kakeya Needle (n = 128) », id 26, slug kakeya-needle-128
+Énoncé        : https://einsteinarena.com/api/problems/kakeya-needle-128
+                sha256 de la réponse JSON : 7fd868a06882d165e985ffdb6c16a865cc80b483cb6d1360c114550bdea19f7a (7 610 octets ; identique à deux relevés à 3 minutes d'écart)
+                sha256 du texte du champ « verifier » (Python) : 4d7e8ddd5a5044b3f0e66f745486538f5b76ddb6687e5fb536aca18b5c6cd098
+                L'énoncé porte l'avertissement « Under active review » (énoncé et vérificateur en cours de revue par la plateforme).
+
+Solution      : soumission id 2608, agent « Ghazt », createdAt 2026-10-06T05:03:37.553Z, evaluatedAt 2026-10-06T05:15:37.806Z,
+                status « evaluated », score 0.10675394011230244 (https://einsteinarena.com/api/solutions/2608)
+URL           : https://einsteinarena.com/api/solutions/best?problem_id=26&limit=1
+                (rang 1 du classement ; la réponse contient data.offsets : 128 chaînes décimales)
+                sha256 de la réponse brute au moment du relevé : 0566b3bfe4008ca5432bc7a9e1f2efc498bbef322daeaaaaa468c261718af794
+                (4 025 octets, identique à deux relevés ; elle CHANGERA dès qu'une autre soumission passe devant)
+                Relevé de contrôle limit=4 : sha256 86c9457245adf2861fe46bfec9ea73ba08abcb3221edbb225520faed45e047fe (13 792 octets),
+                entrées 2608 (Ghazt), 2578 (CrossingPaths), 2575 (JSAgent), 2563 (Station).
+
+Pas de commit : le dépôt https://github.com/togethercomputer/EinsteinArena-new-SOTA n'a aucun dossier kakeya (liste de la racine lue le
+                2026-10-12 : circles-rectangle, edges-vs-triangles, erdos-minimum-overlap, figures, first-autocorrelation, flat-polynomials,
+                heilbronn-convex, hexagon-packing, kissing-number, min-distance-ratio-2d, prime-number-theorem, second-autocorrelation,
+                tammes-problem, third-autocorrelation, uncertainty-inequality). La solution n'existe qu'à travers l'API, sans version.
+
+Épinglage     : sha256 de la FORME CANONIQUE des 128 offsets (les chaînes dans l'ordre, une par ligne, LF, LF final, ASCII, 3 648 octets
+                tels que produits par scripts/extraire.py) :
+                8a9e475f2c54b96d21b6bb385b04d55d559029a9ad96b83e92eddb9173609c29
+                (sha1 d'objet git de ce fichier : 49100aca1bcdd96b2c0964aebf4048f097361cb8)
+                scripts/rejouer.py refuse de rejouer si l'extraction de l'entrée d'id 2608 n'a pas ce sha256.
+
+Licence       : aucune page de conditions sur einsteinarena.com (voir data/import/einsteinarena.md : /terms et /robots.txt en 404 ;
+                skill.md : « GET requests are public »). Aucun droit de réutilisation accordé explicitement : la solution n'est PAS
+                copiée dans ce dossier, seulement l'URL et les empreintes. Le code du vérificateur de la plateforme est lu et exécuté
+                comme témoin, non copié.
